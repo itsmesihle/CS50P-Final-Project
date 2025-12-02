@@ -2,19 +2,27 @@
 
 A clean, modular, and fully logged Rock–Paper–Scissors game written in **Python**, featuring:
 
-- User vs Computer gameplay
+- User vs Computer CLI gameplay
 - Score tracking
 - CSV game-logging with timestamps
 - Terminal ASCII-art welcome screen
 - Input validation & robust structure
 
-This project demonstrates beginner–intermediate Python fundamentals and is suitable for CS50P learners or anyone practicing Python structure and file handling.
+This project demonstrates beginner–intermediate Python fundamentals and is suitable for CS50P learners or anyone practicing Python structure and file handling -> THIS NEEDS TO BE WORKED ON ASAP!!
 
 ---
 
 ## 📌 **Project Description**
 
-This is a console-based Rock–Paper–Scissors game where the user selects:
+This is a console-based Rock–Paper–Scissors game where the welcomes the user with ASCII-art:
+
+- _insert example_
+
+The user is then prompted to select the number of rounds they would like to play:
+
+- _insert example_
+
+At this point the user is asked to select either rock, paper or scissors:
 
 - **(r)** rock
 - **(p)** paper
@@ -23,10 +31,9 @@ This is a console-based Rock–Paper–Scissors game where the user selects:
 The computer randomly selects one of the three options, after which:
 
 - The winner is determined
-- The round is logged into `RPS_game_data.csv`
-- Scores are updated
+- The round is logged with timestamp, scores and results into `RPS_game_data.csv`
 
-After the set number of rounds, a final scoreboard summary is displayed.
+After the set number of rounds, a final scoreboard summary is displayed. After which the `RPS_game_date.csv` is saved, closed and stored on the local computer.
 
 ---
 
