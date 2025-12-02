@@ -136,7 +136,13 @@ Stores:
 
 ### **Option A: automatic install**
 
-- _how to automatically install_
+1. _how to automatically install_:
+
+```
+insert code
+```
+
+2.
 
 ### **Option B: manual install**
 
@@ -155,7 +161,7 @@ python RPS_game.py
 
 ## 📝 **Current Status of Project**
 
-- This RPS game is still being worked on, constantly being updated
+This RPS game is still being worked on, constantly being updated
 
 ## 📝 **Future Improvements**
 
@@ -165,7 +171,7 @@ python RPS_game.py
 
 ---
 
-## 🤝 ** Contributing**
+## 🤝 **Contributing**
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
