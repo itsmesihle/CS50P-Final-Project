@@ -135,8 +135,6 @@ Stores:
 
 ## ▶️ **How to Run the game, and the tests**
 
-### **Option A: automatic install**
-
 1. navigate to your project:
 
 ```bash
@@ -145,13 +143,13 @@ cd path/to/your/project
 
 2. Install or update Python (Windows):
 
-   ---Install Python---
+   ---Install Python (≥3.8)---
 
 ```bash
 winget install Python.Python.3
 ```
 
-    ---Upgrade Python---
+    ---Upgrade Python (≥3.8)---
 
 ```bash
 winget upgrade Python.Python.3
@@ -166,38 +164,16 @@ pip install -r requirements.txt
             OR
 
 ```bash
-
-```
-
-2. Run the game:
-
-```bash
-python project.py
-```
-
-3. Run the tests:
-
-```bash
-pytest test_project.py
-```
-
-### **Option B: manual install**
-
-1. Install Python (≥3.8)
-
-2. Install dependencies:
-
-```bash
 pip install pyfiglet pytest
 ```
 
-3. Run the game:
+4. Run the game:
 
 ```bash
 python project.py
 ```
 
-4. Run the tests:
+5. Run the tests:
 
 ```bash
 pytest test_project.py
