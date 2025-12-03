@@ -77,9 +77,10 @@ After the set number of rounds, a final scoreboard summary is displayed. After w
 ### **Third-Party Libraries**
 
 - **pyfiglet** → ASCII‑art title screen
+- **pytest** → unit-testing
 
 Manual install with:
-`bash\pip install pyfiglet`
+`bash\pip install pyfiglet pytest`
 
 ---
 
@@ -136,10 +137,36 @@ Stores:
 
 ### **Option A: automatic install**
 
-1. _how to automatically install_:
+1. navigate to your project:
 
 ```bash
-insert code
+cd path/to/your/project
+```
+
+2. Install or update Python (Windows):
+
+   ---Install Python---
+
+```bash
+winget install Python.Python.3
+```
+
+    ---Upgrade Python---
+
+```bash
+winget upgrade Python.Python.3
+```
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+            OR
+
+```bash
+
 ```
 
 2. Run the game:
@@ -157,10 +184,11 @@ pytest test_project.py
 ### **Option B: manual install**
 
 1. Install Python (≥3.8)
+
 2. Install dependencies:
 
 ```bash
-pip install pyfiglet
+pip install pyfiglet pytest
 ```
 
 3. Run the game:
@@ -186,7 +214,7 @@ This RPS game is still being worked on, constantly being updated
 - Add difficulty modes
 - Add analytics dashboard from CSV
 - Add persistent user profiles
-- Replace ASCII-art with animation
+- Refactor code and replace ASCII-art with animation
 
 ---
 
@@ -196,11 +224,11 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 Please ensure your updates include:
 
-Clear descriptions
+- Clear descriptions
 
-Clean code formatting
+- Clean code formatting
 
-Explanatory comments when needed
+- Explanatory comments when needed
 
 ---
 
