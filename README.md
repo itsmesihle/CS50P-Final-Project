@@ -20,7 +20,7 @@ This project demonstrates solid beginner-to-intermediate Python skills, includin
 
 This is a console-based Rock–Paper–Scissors game where the welcomes the user with ASCII-art. The user is then prompted to select the number of rounds they would like to play:
 
-![An image of ASCII-art when starting the game](<./images/Screenshot%20(782).png>)
+![An image of ASCII-art when starting the game](<./images/Screenshot%20(782).png> "ASCII-art welcome")
 
 At this point the user is asked to select either rock, paper or scissors:
 
@@ -31,6 +31,9 @@ At this point the user is asked to select either rock, paper or scissors:
 The computer randomly selects one of the three options, after which:
 
 - The winner is determined
+
+![Winner is determined](<./images/Screenshot%20(783).png> "Winner is determined")
+
 - The round is logged with timestamp, scores and results into `RPS_game_data.csv`
 
 After the set number of rounds, a final scoreboard summary is displayed. After which the `RPS_game_date.csv` is saved, closed and stored on the local computer.
