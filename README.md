@@ -152,6 +152,7 @@ cd path/to/your/project
 
 ```bash
 # --- Install Python ---
+
 winget install Python.Python.3
 ```
 
@@ -159,6 +160,7 @@ OR
 
 ```bash
 # --- Upgrade Python ---
+
 winget upgrade Python.Python.3
 ```
 
@@ -166,6 +168,7 @@ winget upgrade Python.Python.3
 
 ```bash
 # --- Automatically install using requirements.txt ---
+
 pip install -r requirements.txt
 ```
 
@@ -173,6 +176,7 @@ OR
 
 ```bash
 # --- Manually install ---
+
 pip install pyfiglet pytest
 ```
 
