@@ -194,7 +194,7 @@ pytest test_project.py
 
 This RPS game is still being worked on, constantly being updated
 
-### 📝 **Future Improvements**
+### **Future Improvements**
 
 - Add difficulty modes
 - Add a graphical UI (Tkinter or web-based)
@@ -239,5 +239,6 @@ This project is licensed under the MIT License - you are free to use, modify, an
 
 ## 🙌 **Credits**
 
-Created by **Sihle - @itsmesihle**
+Created by **Sihle Ndlovu - @itsmesihle**
+
 This project showcases concepts learned in Harvard’s CS50P course through a structured, logged, and test-driven Python application.
