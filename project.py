@@ -57,7 +57,6 @@ def main():
         rounds_played += 1
 
     # display final score...close
-    print("\n📊 Displaying results up to this moment...")
     get_score(computer_score, user_score)
 
 def initialize_csv():
@@ -73,7 +72,7 @@ def print_welcome_message():
     print("\nLet's play\n")
     print(f.renderText('Rock. Paper. Scissors.'))
     print("Rock beats Scissors, Scissors beat Paper, and Paper beats Rock.\n")
-    print("Press 'q' at ANY TIME to quit\n")
+    print("Press 'q' at ANY TIME to quit the game\n")
 
 def get_valid_number_of_rounds(prompt):
     # gets valid int to determine how many rounds will be played
@@ -96,7 +95,7 @@ def get_valid_number_of_rounds(prompt):
 def safe_input(prompt=""):
     user = input(prompt).lower().strip()
     if user == "q":
-        print("\n⚠️ Game aborted by user.")
+        print("\nGame aborted by user.")
         return "QUIT_GAME"
     return user
 
@@ -109,7 +108,7 @@ def get_user_choice():
         if choice in valid_choices:
             return choice
         else:
-            print("Invalid choice. Please type 'r', 'p', 's' or 'q'.")
+            print("\nInvalid choice. Please type 'r', 'p', 's' or 'q'.")
 
 def get_computer_choice():
     return random.choice(["r", "p", "s"])
@@ -134,7 +133,7 @@ def log_to_csv(user_choice, computer_choice, winner):
         writer.writerow([timestamp, user_choice, computer_choice, winner])
 
 def get_score(computer_score, user_score):
-        print(f"\n--- Final Scores --- \n--- Computer Score: {computer_score}\n--- Your Score: {user_score}")
+        print(f"\n--- Final Scores --- \n--- Computer Score: {computer_score}\n--- Your Score: {user_score}\n")
         if computer_score > user_score:
             print("Unlucky the computer won...YOU SUCK!!!\n")
         elif computer_score == user_score:
