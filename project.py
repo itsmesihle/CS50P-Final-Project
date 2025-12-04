@@ -23,8 +23,15 @@ def main():
     while rounds_played < total_rounds:
         print(f"\nRound {rounds_played + 1} of {total_rounds}")
 
-        # computer and user choice
+        # get user choice OR abort sequence
         user_choice = get_user_choice()
+
+        if user_choice == "QUIT_GAME":
+            print("\n Game is aborted early.")
+            log_to_csv("quit", "-", "aborted")
+            break
+
+        # get computer choice
         computer_choice = get_computer_choice()
 
         # determine winner
@@ -39,15 +46,18 @@ def main():
             print(f"You and the computer both picked {user_choice}. Its a draw! play again. ")
             continue
 
-        elif (winner == "user"):
+        elif winner == "user":
             print("You won this round!")
             user_score += 1
-        else:
+
+        elif winner == "computer":
             print("Computer won this round!")
             computer_score += 1
+
         rounds_played += 1
 
     # display final score...close
+    print("\n📊 Displaying results up to this moment...")
     get_score(computer_score, user_score)
 
 def initialize_csv():
@@ -63,15 +73,19 @@ def print_welcome_message():
     print("\nLet's play\n")
     print(f.renderText('Rock. Paper. Scissors.'))
     print("Rock beats Scissors, Scissors beat Paper, and Paper beats Rock.\n")
-    print("Press 'y' to play and 'n' to quit\n")
-
-    # check which button is pressed
+    print("Press 'q' at ANY TIME to quit\n")
 
 def get_valid_number_of_rounds(prompt):
     # gets valid int to determine how many rounds will be played
     while True:
+        user = input(prompt).lower().strip()
+        if user == "q":
+            print("\n⚠️ Game aborted before starting.")
+            log_to_csv("quit", "-", "aborted")
+            exit()
+
         try:
-            n = int(input(prompt))
+            n = int(user)
             if n > 0:
                 return n
             else:
@@ -79,14 +93,23 @@ def get_valid_number_of_rounds(prompt):
         except ValueError:
             print("Invalid input. please enter a number")
 
+def safe_input(prompt=""):
+    user = input(prompt).lower().strip()
+    if user == "q":
+        print("\n⚠️ Game aborted by user.")
+        return "QUIT_GAME"
+    return user
+
 def get_user_choice():
-    valid_choices = ["r", "p", "s"]
+    valid_choices = ["r", "p", "s", "q"]
     while True:
-        choice = input("Choose between (r)ock, (p)aper or (s)cissors: ").lower().strip()
+        choice = input("Choose between (r)ock, (p)aper or (s)cissors or 'q' to quit: ").lower().strip()
+        if choice == "q":
+            return "QUIT_GAME"
         if choice in valid_choices:
             return choice
         else:
-            print("Invalid choice. Please type 'r', 'p', or 's'.")
+            print("Invalid choice. Please type 'r', 'p', 's' or 'q'.")
 
 def get_computer_choice():
     return random.choice(["r", "p", "s"])
@@ -95,7 +118,10 @@ def determine_winner(user, computer):
     if user == computer:
         return "draw"
 
-    elif ((user == "r" and computer == "s") or (user == "s" and computer == "r") or (user == "p" and computer == "r")):
+    elif (
+        (user == "r" and computer == "s") or
+        (user == "s" and computer == "r") or
+        (user == "p" and computer == "r")):
         return "user"
 
     else:
