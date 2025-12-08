@@ -4,9 +4,9 @@
 ![Course](https://img.shields.io/badge/Harvard-CS50P-red)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
-![Repo Size](https://img.shields.io/github/repo-size/itsmesihle/RPS-Game)
-![Last Commit](https://img.shields.io/github/last-commit/itsmesihle/RPS-Game)
-![Issues](https://img.shields.io/github/issues/itsmesihle/RPS-Game)
+![Repo Size](https://img.shields.io/github/repo-size/itsmesihle/RPS-CLI-Game)
+![Last Commit](https://img.shields.io/github/last-commit/itsmesihle/RPS-CLI-Game)
+![Issues](https://img.shields.io/github/issues/itsmesihle/RPS-CLI-Game)
 
 A clean, modular, and fully logged Rock–Paper–Scissors game written in **Python**, featuring:
 
