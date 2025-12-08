@@ -19,6 +19,7 @@ This project demonstrates solid beginner-to-intermediate Python skills, includin
 ## 📚 Table of Contents
 
 - [Project Description](#-project-description)
+- [Why This Project Matters](#-why-this-project-matters)
 - [Skills Showcased](#-skills-showcased)
 - [Libraries & Modules Used](#-libraries--modules-used)
 - [Project Structure](#-project-structure)
@@ -52,6 +53,12 @@ The computer randomly selects one of the three options, after which:
 - The round is logged with timestamp, scores and results into `RPS_game_data.csv`
 
 After the set number of rounds, a final scoreboard summary is displayed. After which the `RPS_game_date.csv` is saved, closed and stored on the local computer.
+
+---
+
+## 🎯 Why This Project Matters
+
+This project demonstrates my ability to write testable, maintainable Python code while following good software engineering practices such as modularization, logging, and automated testing.
 
 ---
 
