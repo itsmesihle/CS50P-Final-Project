@@ -293,8 +293,8 @@ I welcome connection requests from recruiters and fellow developers to discuss:
 - This project and the technical decisions made.
 - Potential full-time roles or internships.
 
-**Let's Connect!**
+### **Let's Connect!**
 
-- **LinkedIn:** https://www.linkedin.com/feed/
-- **Email:** [https://www.linkedin.com/feed/]
-- **Portfolio/Website:** [Your Personal Website Link (if applicable)]
+- [LinkedIn](https://www.linkedin.com/feed/)
+- [Email](mailto:msihlesndlovu97@gmail.com?subject=Let's%20Connect%20-%20RPS%20-%20Game)
+- [Portfolio](https://github.com/itsmesihle)
