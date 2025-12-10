@@ -8,8 +8,6 @@
 ![Last Commit](https://img.shields.io/github/last-commit/itsmesihle/RPS-CLI-Game)
 ![Issues](https://img.shields.io/github/issues/itsmesihle/RPS-CLI-Game)
 
-![Skills](https://img.shields.io/badge/Skills-Modular_Design%2C_Pytest%2C_File_I%2FO-orange)
-
 A clean, modular, and fully logged Rock–Paper–Scissors game written in **Python**, featuring:
 
 - User vs Computer CLI gameplay
@@ -69,6 +67,8 @@ This project demonstrates my ability to write testable, maintainable Python code
 ---
 
 ## 🧠 **Skills Showcased**
+
+![Skills](https://img.shields.io/badge/Skills-Modular_Design%2C_Pytest%2C_File_I%2FO-orange)
 
 ### **Python Fundamentals**
 
@@ -279,3 +279,22 @@ This project is licensed under the MIT License - you are free to use, modify, an
 Created by **Sihle Ndlovu - @itsmesihle**
 
 This project showcases concepts learned in Harvard’s CS50P course through a structured, logged, and test-driven Python application.
+
+---
+
+## 👋 **Connect with Me (Actively Seeking Roles!)**
+
+I am a job seeker actively looking for **Software Developer** or **Backend Python** opportunities.
+
+This project demonstrates my proficiency in building **testable, modular Python applications**.
+
+I welcome connection requests from recruiters and fellow developers to discuss:
+
+- This project and the technical decisions made.
+- Potential full-time roles or internships.
+
+**Let's Connect!**
+
+- **LinkedIn:** https://www.linkedin.com/feed/
+- **Email:** [https://www.linkedin.com/feed/]
+- **Portfolio/Website:** [Your Personal Website Link (if applicable)]
