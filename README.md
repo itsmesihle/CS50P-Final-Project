@@ -8,6 +8,8 @@
 ![Last Commit](https://img.shields.io/github/last-commit/itsmesihle/RPS-CLI-Game)
 ![Issues](https://img.shields.io/github/issues/itsmesihle/RPS-CLI-Game)
 
+![Skills](https://img.shields.io/badge/Skills-Modular_Design%2C_Pytest%2C_File_I%2FO-orange)
+
 A clean, modular, and fully logged Rock–Paper–Scissors game written in **Python**, featuring:
 
 - User vs Computer CLI gameplay
