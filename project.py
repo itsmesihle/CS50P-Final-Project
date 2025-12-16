@@ -32,6 +32,13 @@ def main():
             log_to_csv("quit", "-", "aborted")
             break
 
+        # INVALID CHOICE handling
+        valid_options = ["r", "p", "s"]
+        if user_choice not in valid_options:
+            print("\n Invalid choice. Please type 'r', 'p' or 's'. \n")
+            log_to_csv(user_choice, "-", "invalid")
+            continue
+
         # get computer choice
         computer_choice = get_computer_choice()
 
@@ -116,15 +123,10 @@ def safe_input(prompt=""):
     return user
 
 def get_user_choice():
-    valid_choices = ["r", "p", "s", "q"]
-    while True:
-        choice = input("Choose between (r)ock, (p)aper or (s)cissors or 'q' to quit: ").lower().strip()
-        if choice == "q":
-            return "QUIT_GAME"
-        if choice in valid_choices:
-            return choice
-        else:
-            print("\nInvalid choice. Please type 'r', 'p', 's' or 'q'.\n")
+    choice = input("Choose between (r)ock, (p)aper or (s)cissors or 'q' to quit: ").lower().strip()
+    if choice == "q":
+        return "QUIT_GAME"
+    return choice
 
 def get_computer_choice():
     return random.choice(["r", "p", "s"])
@@ -168,6 +170,7 @@ def get_score(computer_score, user_score):
 
 if __name__ == "__main__":
     main()
+
 
 """ # sorted fonts
 font_list = pyfiglet.FigletFont.getFonts()
