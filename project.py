@@ -13,7 +13,7 @@ def main():
 
     # welcome procedure
     print_welcome_message()
-    total_rounds = get_valid_number_of_rounds("How many games would you like to play? ") # this message should not disappear when show_ascii() works properly
+    total_rounds = get_valid_number_of_rounds("How many games would you like to play? ")
 
     # declare variables
     user_score = 0
@@ -23,8 +23,6 @@ def main():
     # actual game plays
     while rounds_played < total_rounds:
         print(f"\nRound {rounds_played + 1} of {total_rounds}")
-
-        # maybe use classes instead of functions next time
 
         # get user choice OR abort sequence
         user_choice = get_user_choice()
@@ -53,6 +51,10 @@ def main():
             print(f"You and the computer both picked {user_word}. Its a draw! play again. ")
             continue
 
+        elif winner == "invalid":
+            print(f"That was an invalid choice. ")
+            continue
+
         elif winner == "user":
             print(f"You chose {user_word} and the computer chose {computer_word}. You win this round!")
             user_score += 1
@@ -75,8 +77,8 @@ def initialize_csv():
             writer.writerow(["timestamp", "user_choice", "computer_choice", "winner"])
 
 def print_welcome_message():
-    show_ascii() 
-    
+    show_ascii()
+
 def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
@@ -122,7 +124,7 @@ def get_user_choice():
         if choice in valid_choices:
             return choice
         else:
-            print("\nInvalid choice. Please type 'r', 'p', 's' or 'q'.")
+            print("\nInvalid choice. Please type 'r', 'p', 's' or 'q'.\n")
 
 def get_computer_choice():
     return random.choice(["r", "p", "s"])
@@ -140,8 +142,14 @@ def determine_winner(user, computer):
         (user == "p" and computer == "r")):
         return "user"
 
-    else:
+    elif (
+        (user == "r" and computer == "p") or
+        (user == "s" and computer == "r") or
+        (user == "p" and computer == "s")):
         return "computer"
+
+    else:
+        return "invalid"
 
 def log_to_csv(user_choice, computer_choice, winner):
     timestamp = datetime.now().isoformat(timespec="seconds")
@@ -152,7 +160,7 @@ def log_to_csv(user_choice, computer_choice, winner):
 def get_score(computer_score, user_score):
         print(f"\n--- Final Scores --- \n--- Computer Score: {computer_score}\n--- Your Score: {user_score}\n")
         if computer_score > user_score:
-            print("Unlucky the computer won...YOU SUCK!!!\n")
+            print("The computer won...YOU SUCK!!!\n")
         elif computer_score == user_score:
             print("You and the computer are evenly matched. It's a DRAW!!!")
         else:
